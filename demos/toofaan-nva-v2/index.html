@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bangladesh's trusted online marketplace. Shop verified products from our exclusive collection and trusted local sellers. Fast delivery, cash on delivery, easy returns.">
+  <meta name="keywords" content="online shopping Bangladesh, best marketplace Bangladesh, buy products online BD, e-commerce Bangladesh">
+  <title>TOOFAN - Bangladesh's Trusted Online Marketplace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --color-primary: #00875A;
+      --color-secondary: #DC2626;
+      --color-surface: #FFFFFF;
+      --color-background: #F8FAFC;
+      --color-text: #1E293B;
+    }
+    
+    * {
+      font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+    }
+    
+    .bangla-text {
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+    
+    .gradient-hero {
+      background: linear-gradient(135deg, #00875A 0%, #00A86B 50%, #34D399 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -12px rgba(0, 135, 90, 0.15);
+    }
+    
+    .pulse-badge {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    .countdown-box {
+      background: linear-gradient(180deg, #DC2626 0%, #B91C1C 100%);
+    }
+    
+    .scroll-fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideOut {
+      from {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+    }
+    
+    .sticky-header {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .category-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+    }
+    
+    .trust-icon {
+      background: linear-gradient(135deg, #00875A 0%, #34D399 100%);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-slate-50 text-slate-800 overflow-auto">
+  <div id="app-wrapper" class="w-full h-full"><!-- Top Announcement Bar -->
+   <div class="bg-slate-900 text-white py-2 px-4 text-center text-sm"><span class="inline-flex items-center gap-2"> 🎉 <span id="announcement-text">Free Delivery on orders over ৳999!</span> <span class="hidden sm:inline">|</span> <span class="hidden sm:inline bangla-text">৳৯৯৯+ অর্ডারে ফ্রি ডেলিভারি!</span> </span>
+   </div><!-- Header -->
+   <header id="main-header" class="sticky top-0 z-50 sticky-header border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+     <div class="flex items-center justify-between gap-4"><!-- Logo -->
+      <div class="flex-shrink-0"><a href="#" class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: var(--color-primary);">
+         <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm0 10c-2.76 0-5-2.24-5-5h2c0 1.66 1.34 3 3 3s3-1.34 3-3h2c0 2.76-2.24 5-5 5z" />
+         </svg>
+        </div><span id="logo-text" class="text-xl font-bold hidden sm:block" style="color: var(--color-primary);">TOOFAN</span> </a>
+      </div><!-- Search Bar -->
+      <div class="flex-1 max-w-2xl">
+       <div class="relative"><input type="search" placeholder="Search products, brands, categories..." class="w-full pl-12 pr-4 py-3 rounded-full border-2 border-slate-200 focus:border-emerald-500 focus:outline-none transition-colors text-sm" style="background: var(--color-surface);">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+       </div>
+      </div><!-- Right Actions -->
+      <div class="flex items-center gap-2 sm:gap-4"><!-- Language Toggle --> <button id="lang-toggle" class="hidden sm:flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors text-sm font-medium"> <span>EN</span> <span class="text-slate-400">/</span> <span class="bangla-text text-slate-500">বাং</span> </button> <!-- Account --> <button class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors">
+        <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg><span class="hidden md:block text-sm font-medium">Account</span> </button> <!-- Cart --> <button onclick="openCartModal()" class="relative flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors">
+        <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg><span class="cart-badge absolute -top-1 -right-1 w-5 h-5 rounded-full text-white text-xs flex items-center justify-center font-bold" style="background: var(--color-secondary);">0</span> </button>
+      </div>
+     </div>
+    </div><!-- Category Navigation -->
+    <div class="border-t border-slate-100 bg-white">
+     <div class="max-w-7xl mx-auto px-4">
+      <nav class="flex items-center gap-1 overflow-x-auto py-2 scrollbar-hide"><a href="#" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-colors hover:bg-emerald-50" style="color: var(--color-primary);">All Categories</a> <a href="#" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Electronics</a> <a href="#" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Fashion</a> <a href="#" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Home &amp; Kitchen</a> <a href="#" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Groceries</a> <a href="#" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Beauty</a> <a href="#" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Mobile</a>
+      </nav>
+     </div>
+    </div>
+   </header>
+   <main><!-- Hero Section -->
+    <section class="gradient-hero relative overflow-hidden">
+     <div class="absolute inset-0 opacity-10">
+      <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><defs>
+        <pattern id="grid" width="10" height="10" patternunits="userSpaceOnUse">
+         <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" />
+        </pattern>
+       </defs> <rect width="100" height="100" fill="url(#grid)" />
+      </svg>
+     </div>
+     <div class="max-w-7xl mx-auto px-4 py-12 md:py-20 relative">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+       <div class="text-white space-y-6">
+        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm"><span class="w-2 h-2 bg-yellow-400 rounded-full pulse-badge"></span> <span>🇧🇩 Made for Bangladesh</span>
+        </div>
+        <h1 id="hero-headline" class="text-3xl md:text-5xl font-bold leading-tight">Bangladesh's Trusted Online Marketplace for Quality &amp; Value</h1>
+        <p id="hero-subheadline" class="text-lg md:text-xl text-emerald-100 leading-relaxed">Shop verified products from us and trusted local sellers — delivered fast to your doorstep.</p>
+        <div class="flex flex-wrap gap-4"><a href="#products" class="inline-flex items-center gap-2 bg-white text-emerald-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-50 transition-colors shadow-lg shadow-emerald-900/20"> <span>Shop Now</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg></a> <a href="#seller" class="inline-flex items-center gap-2 bg-emerald-800/50 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-800/70 transition-colors border border-white/20"> <span>Become a Seller</span> </a>
+        </div>
+        <div class="flex items-center gap-6 pt-4">
+         <div class="flex -space-x-3">
+          <div class="w-10 h-10 rounded-full bg-emerald-200 border-2 border-white flex items-center justify-center text-lg">
+           👨
+          </div>
+          <div class="w-10 h-10 rounded-full bg-emerald-300 border-2 border-white flex items-center justify-center text-lg">
+           👩
+          </div>
+          <div class="w-10 h-10 rounded-full bg-emerald-400 border-2 border-white flex items-center justify-center text-lg">
+           👨‍💼
+          </div>
+         </div>
+         <div class="text-sm">
+          <p class="font-bold">50,000+ Happy Customers</p>
+          <p class="text-emerald-200">Join our growing family</p>
+         </div>
+        </div>
+       </div>
+       <div class="relative hidden md:block">
+        <div class="relative z-10 bg-white rounded-3xl p-6 shadow-2xl shadow-emerald-900/30 rotate-3 hover:rotate-0 transition-transform duration-500">
+         <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center">
+           <svg class="w-6 h-6" style="color: var(--color-primary);" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+           </svg>
+          </div>
+          <div>
+           <p class="font-bold text-slate-800">Order Confirmed!</p>
+           <p class="text-sm text-slate-500">Delivery in 2-3 days</p>
+          </div>
+         </div>
+         <div class="space-y-3">
+          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl">
+           <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-2xl">
+            📱
+           </div>
+           <div class="flex-1">
+            <p class="font-medium text-slate-800">Smartphone Pro Max</p>
+            <p class="text-sm text-emerald-600 font-bold">৳45,999</p>
+           </div>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl">
+           <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-2xl">
+            👗
+           </div>
+           <div class="flex-1">
+            <p class="font-medium text-slate-800">Summer Collection</p>
+            <p class="text-sm text-emerald-600 font-bold">৳1,299</p>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-yellow-400 rounded-full opacity-60 blur-2xl"></div>
+        <div class="absolute -top-6 -right-6 w-24 h-24 bg-emerald-300 rounded-full opacity-60 blur-2xl"></div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Trust Indicators -->
+    <section class="bg-white py-8 border-b border-slate-100">
+     <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+       <div class="flex items-center gap-3 p-4">
+        <div class="trust-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+         </svg>
+        </div>
+        <div>
+         <p id="trust-text-1" class="font-bold text-slate-800 text-sm">100% Verified</p>
+         <p class="text-xs text-slate-500">Trusted Sellers</p>
+        </div>
+       </div>
+       <div class="flex items-center gap-3 p-4">
+        <div class="trust-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg>
+        </div>
+        <div>
+         <p id="trust-text-2" class="font-bold text-slate-800 text-sm">Fast Delivery</p>
+         <p class="text-xs text-slate-500">Nationwide</p>
+        </div>
+       </div>
+       <div class="flex items-center gap-3 p-4">
+        <div class="trust-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+        </div>
+        <div>
+         <p class="font-bold text-slate-800 text-sm">Cash on Delivery</p>
+         <p class="text-xs text-slate-500">Pay at doorstep</p>
+        </div>
+       </div>
+       <div class="flex items-center gap-3 p-4">
+        <div class="trust-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+         </svg>
+        </div>
+        <div>
+         <p class="font-bold text-slate-800 text-sm">Easy Returns</p>
+         <p class="text-xs text-slate-500">7-day policy</p>
+        </div>
+       </div>
+       <div class="flex items-center gap-3 p-4">
+        <div class="trust-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+         </svg>
+        </div>
+        <div>
+         <p class="font-bold text-slate-800 text-sm">Secure Payments</p>
+         <p class="text-xs text-slate-500">100% safe</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Featured Categories -->
+    <section class="py-12 md:py-16" style="background: var(--color-background);">
+     <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-8">
+       <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">Shop by Category</h2>
+        <p class="text-slate-500 mt-1">Find what you need</p>
+       </div><a href="#" class="text-sm font-medium hover:underline" style="color: var(--color-primary);">View All →</a>
+      </div>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-4"><a href="#" class="category-card group p-4 rounded-2xl text-center card-hover border border-slate-100">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-blue-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+         📱
+        </div><p class="font-medium text-slate-800 text-sm">Electronics</p></a> <a href="#" class="category-card group p-4 rounded-2xl text-center card-hover border border-slate-100">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-pink-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+         👗
+        </div><p class="font-medium text-slate-800 text-sm">Fashion</p></a> <a href="#" class="category-card group p-4 rounded-2xl text-center card-hover border border-slate-100">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-amber-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+         🏠
+        </div><p class="font-medium text-slate-800 text-sm">Home</p></a> <a href="#" class="category-card group p-4 rounded-2xl text-center card-hover border border-slate-100">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-green-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+         🥬
+        </div><p class="font-medium text-slate-800 text-sm">Groceries</p></a> <a href="#" class="category-card group p-4 rounded-2xl text-center card-hover border border-slate-100">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-purple-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+         💄
+        </div><p class="font-medium text-slate-800 text-sm">Beauty</p></a> <a href="#" class="category-card group p-4 rounded-2xl text-center card-hover border border-slate-100">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-cyan-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+         🎧
+        </div><p class="font-medium text-slate-800 text-sm">Accessories</p></a>
+      </div>
+     </div>
+    </section><!-- Flash Sale Section -->
+    <section class="py-12 md:py-16 bg-white">
+     <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);">
+       <div class="p-6 md:p-8">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+         <div class="flex items-center gap-4">
+          <div class="text-4xl">
+           ⚡
+          </div>
+          <div class="text-white">
+           <h2 class="text-2xl md:text-3xl font-bold">Flash Sale</h2>
+           <p class="text-red-200">Limited time offers!</p>
+          </div>
+         </div>
+         <div class="flex items-center gap-2"><span class="text-white text-sm font-medium">Ends in:</span>
+          <div class="flex gap-2" id="countdown">
+           <div class="countdown-box px-3 py-2 rounded-lg text-white text-center min-w-[50px]">
+            <p class="text-xl font-bold" id="hours">05</p>
+            <p class="text-xs text-red-200">Hours</p>
+           </div>
+           <div class="countdown-box px-3 py-2 rounded-lg text-white text-center min-w-[50px]">
+            <p class="text-xl font-bold" id="minutes">23</p>
+            <p class="text-xs text-red-200">Mins</p>
+           </div>
+           <div class="countdown-box px-3 py-2 rounded-lg text-white text-center min-w-[50px]">
+            <p class="text-xl font-bold" id="seconds">47</p>
+            <p class="text-xs text-red-200">Secs</p>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+         <div class="bg-white rounded-2xl p-4 card-hover">
+          <div class="relative mb-3">
+           <div class="aspect-square rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-5xl">
+            🎧
+           </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-40%</span>
+          </div>
+          <h3 class="font-medium text-slate-800 text-sm line-clamp-2">Wireless Earbuds Pro</h3>
+          <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳1,499</span> <span class="text-sm text-slate-400 line-through">৳2,499</span>
+          </div>
+          <div class="flex items-center gap-1 mt-2"><span class="text-yellow-400 text-sm">★★★★★</span> <span class="text-xs text-slate-500">(234)</span>
+          </div>
+         </div>
+         <div class="bg-white rounded-2xl p-4 card-hover">
+          <div class="relative mb-3">
+           <div class="aspect-square rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center text-5xl">
+            ⌚
+           </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-35%</span>
+          </div>
+          <h3 class="font-medium text-slate-800 text-sm line-clamp-2">Smart Watch Series 5</h3>
+          <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳3,999</span> <span class="text-sm text-slate-400 line-through">৳6,199</span>
+          </div>
+          <div class="flex items-center gap-1 mt-2"><span class="text-yellow-400 text-sm">★★★★☆</span> <span class="text-xs text-slate-500">(189)</span>
+          </div>
+         </div>
+         <div class="bg-white rounded-2xl p-4 card-hover">
+          <div class="relative mb-3">
+           <div class="aspect-square rounded-xl bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center text-5xl">
+            👜
+           </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-50%</span>
+          </div>
+          <h3 class="font-medium text-slate-800 text-sm line-clamp-2">Premium Leather Bag</h3>
+          <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳999</span> <span class="text-sm text-slate-400 line-through">৳1,999</span>
+          </div>
+          <div class="flex items-center gap-1 mt-2"><span class="text-yellow-400 text-sm">★★★★★</span> <span class="text-xs text-slate-500">(412)</span>
+          </div>
+         </div>
+         <div class="bg-white rounded-2xl p-4 card-hover">
+          <div class="relative mb-3">
+           <div class="aspect-square rounded-xl bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center text-5xl">
+            🧴
+           </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-30%</span>
+          </div>
+          <h3 class="font-medium text-slate-800 text-sm line-clamp-2">Skincare Gift Set</h3>
+          <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳1,299</span> <span class="text-sm text-slate-400 line-through">৳1,899</span>
+          </div>
+          <div class="flex items-center gap-1 mt-2"><span class="text-yellow-400 text-sm">★★★★☆</span> <span class="text-xs text-slate-500">(156)</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Our Products (Platform-Owned) -->
+    <section id="products" class="py-12 md:py-16" style="background: var(--color-background);">
+     <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-8">
+       <div>
+        <div class="inline-flex items-center gap-2 text-white text-xs font-bold px-3 py-1 rounded-full mb-3" style="background: var(--color-primary);">
+         <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+         </svg> EXCLUSIVE
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">Our Products</h2>
+        <p class="text-slate-500 mt-1">Quality guaranteed by TOOFAN</p>
+       </div><a href="#" class="text-sm font-medium hover:underline" style="color: var(--color-primary);">View All →</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+       <div onclick="openProductDetail(products['smartphone'])" class="bg-white rounded-2xl p-4 card-hover border border-slate-100 relative overflow-hidden cursor-pointer">
+        <div class="absolute top-4 left-4 z-10"><span class="inline-flex items-center gap-1 text-xs font-bold px-2 py-1 rounded-full text-white" style="background: var(--color-primary);">
+          <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg> TOOFAN </span>
+        </div>
+        <div class="aspect-square rounded-xl bg-gradient-to-br from-violet-100 to-violet-200 flex items-center justify-center text-5xl mb-4">
+         📱
+        </div>
+        <h3 class="font-semibold text-slate-800 line-clamp-2">Flagship Smartphone 128GB</h3>
+        <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳32,999</span> <span class="text-sm text-slate-400 line-through">৳39,999</span>
+        </div>
+        <div class="flex items-center justify-between mt-3">
+         <div class="flex items-center gap-1"><span class="text-yellow-400">★</span> <span class="text-sm font-medium text-slate-700">4.8</span> <span class="text-xs text-slate-400">(523)</span>
+         </div><span class="text-xs text-emerald-600 font-medium">Free Delivery</span>
+        </div><button onclick="event.stopPropagation(); addToCart(products['smartphone'])" class="w-full mt-4 py-2.5 rounded-xl font-semibold text-white transition-colors hover:opacity-90" style="background: var(--color-primary);">Add to Cart</button>
+       </div>
+       <div onclick="openProductDetail(products['cookware'])" class="bg-white rounded-2xl p-4 card-hover border border-slate-100 relative overflow-hidden cursor-pointer">
+        <div class="absolute top-4 left-4 z-10"><span class="inline-flex items-center gap-1 text-xs font-bold px-2 py-1 rounded-full text-white" style="background: var(--color-primary);">
+          <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg> TOOFAN </span>
+        </div>
+        <div class="aspect-square rounded-xl bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center text-5xl mb-4">
+         🍳
+        </div>
+        <h3 class="font-semibold text-slate-800 line-clamp-2">Non-Stick Cookware Set</h3>
+        <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳4,599</span> <span class="text-sm text-slate-400 line-through">৳5,999</span>
+        </div>
+        <div class="flex items-center justify-between mt-3">
+         <div class="flex items-center gap-1"><span class="text-yellow-400">★</span> <span class="text-sm font-medium text-slate-700">4.9</span> <span class="text-xs text-slate-400">(312)</span>
+         </div><span class="text-xs text-emerald-600 font-medium">Free Delivery</span>
+        </div><button onclick="event.stopPropagation(); addToCart(products['cookware'])" class="w-full mt-4 py-2.5 rounded-xl font-semibold text-white transition-colors hover:opacity-90" style="background: var(--color-primary);">Add to Cart</button>
+       </div>
+       <div onclick="openProductDetail(products['shoes'])" class="bg-white rounded-2xl p-4 card-hover border border-slate-100 relative overflow-hidden cursor-pointer">
+        <div class="absolute top-4 left-4 z-10"><span class="inline-flex items-center gap-1 text-xs font-bold px-2 py-1 rounded-full text-white" style="background: var(--color-primary);">
+          <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg> TOOFAN </span>
+        </div>
+        <div class="aspect-square rounded-xl bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center text-5xl mb-4">
+         👟
+        </div>
+        <h3 class="font-semibold text-slate-800 line-clamp-2">Premium Running Shoes</h3>
+        <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳2,799</span> <span class="text-sm text-slate-400 line-through">৳3,499</span>
+        </div>
+        <div class="flex items-center justify-between mt-3">
+         <div class="flex items-center gap-1"><span class="text-yellow-400">★</span> <span class="text-sm font-medium text-slate-700">4.7</span> <span class="text-xs text-slate-400">(287)</span>
+         </div><span class="text-xs text-emerald-600 font-medium">Free Delivery</span>
+        </div><button onclick="event.stopPropagation(); addToCart(products['shoes'])" class="w-full mt-4 py-2.5 rounded-xl font-semibold text-white transition-colors hover:opacity-90" style="background: var(--color-primary);">Add to Cart</button>
+       </div>
+       <div onclick="openProductDetail(products['laptop-stand'])" class="bg-white rounded-2xl p-4 card-hover border border-slate-100 relative overflow-hidden cursor-pointer">
+        <div class="absolute top-4 left-4 z-10"><span class="inline-flex items-center gap-1 text-xs font-bold px-2 py-1 rounded-full text-white" style="background: var(--color-primary);">
+          <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg> TOOFAN </span>
+        </div>
+        <div class="aspect-square rounded-xl bg-gradient-to-br from-cyan-100 to-cyan-200 flex items-center justify-center text-5xl mb-4">
+         💻
+        </div>
+        <h3 class="font-semibold text-slate-800 line-clamp-2">Laptop Stand Aluminum</h3>
+        <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳1,899</span> <span class="text-sm text-slate-400 line-through">৳2,499</span>
+        </div>
+        <div class="flex items-center justify-between mt-3">
+         <div class="flex items-center gap-1"><span class="text-yellow-400">★</span> <span class="text-sm font-medium text-slate-700">4.6</span> <span class="text-xs text-slate-400">(198)</span>
+         </div><span class="text-xs text-emerald-600 font-medium">Free Delivery</span>
+        </div><button onclick="event.stopPropagation(); addToCart(products['laptop-stand'])" class="w-full mt-4 py-2.5 rounded-xl font-semibold text-white transition-colors hover:opacity-90" style="background: var(--color-primary);">Add to Cart</button>
+       </div>
+      </div>
+     </div>
+    </section><!-- Top Merchant Products -->
+    <section class="py-12 md:py-16 bg-white">
+     <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-8">
+       <div>
+        <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-3">
+         <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+         </svg> TOP SELLERS
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">From Trusted Sellers</h2>
+        <p class="text-slate-500 mt-1">Verified merchants on our platform</p>
+       </div><a href="#" class="text-sm font-medium hover:underline" style="color: var(--color-primary);">View All →</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+       <div class="bg-white rounded-2xl p-4 card-hover border border-slate-200 relative overflow-hidden">
+        <div class="absolute top-4 left-4 z-10"><span class="inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">
+          <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+          </svg> Verified </span>
+        </div>
+        <div class="aspect-square rounded-xl bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center text-5xl mb-4">
+         🎒
+        </div>
+        <div class="flex items-center gap-2 mb-2">
+         <div class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">
+          🏪
+         </div><span class="text-xs text-slate-500">TechStore BD</span> <span class="text-yellow-400 text-xs">★ 4.8</span>
+        </div>
+        <h3 class="font-semibold text-slate-800 line-clamp-2">Anti-Theft Laptop Backpack</h3>
+        <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳1,599</span> <span class="text-sm text-slate-400 line-through">৳2,199</span>
+        </div>
+        <div class="flex items-center gap-1 mt-2"><span class="text-yellow-400 text-sm">★★★★★</span> <span class="text-xs text-slate-500">(456)</span>
+        </div><button class="w-full mt-4 py-2.5 rounded-xl font-semibold border-2 transition-colors hover:bg-slate-50" style="border-color: var(--color-primary); color: var(--color-primary);">Add to Cart</button>
+       </div>
+       <div class="bg-white rounded-2xl p-4 card-hover border border-slate-200 relative overflow-hidden">
+        <div class="absolute top-4 left-4 z-10"><span class="inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">
+          <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+          </svg> Verified </span>
+        </div>
+        <div class="aspect-square rounded-xl bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center text-5xl mb-4">
+         🧥
+        </div>
+        <div class="flex items-center gap-2 mb-2">
+         <div class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">
+          👔
+         </div><span class="text-xs text-slate-500">Fashion Hub</span> <span class="text-yellow-400 text-xs">★ 4.9</span>
+        </div>
+        <h3 class="font-semibold text-slate-800 line-clamp-2">Winter Jacket Premium</h3>
+        <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳2,899</span> <span class="text-sm text-slate-400 line-through">৳3,999</span>
+        </div>
+        <div class="flex items-center gap-1 mt-2"><span class="text-yellow-400 text-sm">★★★★★</span> <span class="text-xs text-slate-500">(321)</span>
+        </div><button class="w-full mt-4 py-2.5 rounded-xl font-semibold border-2 transition-colors hover:bg-slate-50" style="border-color: var(--color-primary); color: var(--color-primary);">Add to Cart</button>
+       </div>
+       <div class="bg-white rounded-2xl p-4 card-hover border border-slate-200 relative overflow-hidden">
+        <div class="absolute top-4 left-4 z-10"><span class="inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">
+          <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+          </svg> Verified </span>
+        </div>
+        <div class="aspect-square rounded-xl bg-gradient-to-br from-lime-100 to-lime-200 flex items-center justify-center text-5xl mb-4">
+         🪴
+        </div>
+        <div class="flex items-center gap-2 mb-2">
+         <div class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">
+          🌱
+         </div><span class="text-xs text-slate-500">Green Garden</span> <span class="text-yellow-400 text-xs">★ 4.7</span>
+        </div>
+        <h3 class="font-semibold text-slate-800 line-clamp-2">Indoor Plant Collection</h3>
+        <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳899</span> <span class="text-sm text-slate-400 line-through">৳1,299</span>
+        </div>
+        <div class="flex items-center gap-1 mt-2"><span class="text-yellow-400 text-sm">★★★★☆</span> <span class="text-xs text-slate-500">(189)</span>
+        </div><button class="w-full mt-4 py-2.5 rounded-xl font-semibold border-2 transition-colors hover:bg-slate-50" style="border-color: var(--color-primary); color: var(--color-primary);">Add to Cart</button>
+       </div>
+       <div class="bg-white rounded-2xl p-4 card-hover border border-slate-200 relative overflow-hidden">
+        <div class="absolute top-4 left-4 z-10"><span class="inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">
+          <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+          </svg> Verified </span>
+        </div>
+        <div class="aspect-square rounded-xl bg-gradient-to-br from-fuchsia-100 to-fuchsia-200 flex items-center justify-center text-5xl mb-4">
+         💅
+        </div>
+        <div class="flex items-center gap-2 mb-2">
+         <div class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">
+          💄
+         </div><span class="text-xs text-slate-500">Beauty Queen</span> <span class="text-yellow-400 text-xs">★ 4.8</span>
+        </div>
+        <h3 class="font-semibold text-slate-800 line-clamp-2">Nail Art Kit Complete</h3>
+        <div class="flex items-center gap-2 mt-2"><span class="text-lg font-bold" style="color: var(--color-primary);">৳699</span> <span class="text-sm text-slate-400 line-through">৳999</span>
+        </div>
+        <div class="flex items-center gap-1 mt-2"><span class="text-yellow-400 text-sm">★★★★★</span> <span class="text-xs text-slate-500">(267)</span>
+        </div><button class="w-full mt-4 py-2.5 rounded-xl font-semibold border-2 transition-colors hover:bg-slate-50" style="border-color: var(--color-primary); color: var(--color-primary);">Add to Cart</button>
+       </div>
+      </div>
+     </div>
+    </section><!-- How It Works -->
+    <section class="py-12 md:py-16" style="background: var(--color-background);">
+     <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+       <h2 class="text-2xl md:text-3xl font-bold text-slate-800">How It Works</h2>
+       <p class="text-slate-500 mt-2">Simple steps to shop with confidence</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center text-4xl" style="background: linear-gradient(135deg, #00875A20 0%, #00875A10 100%);">
+         🔍
+        </div>
+        <div class="inline-flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm mb-4" style="background: var(--color-primary);">
+         1
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 mb-2">Browse Products</h3>
+        <p class="text-slate-500 text-sm">Explore thousands of products from our collection and verified sellers</p>
+       </div>
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center text-4xl" style="background: linear-gradient(135deg, #00875A20 0%, #00875A10 100%);">
+         🛒
+        </div>
+        <div class="inline-flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm mb-4" style="background: var(--color-primary);">
+         2
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 mb-2">Order Securely</h3>
+        <p class="text-slate-500 text-sm">Add to cart and checkout with multiple secure payment options</p>
+       </div>
+       <div class="text-center">
+        <div class="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center text-4xl" style="background: linear-gradient(135deg, #00875A20 0%, #00875A10 100%);">
+         ���
+        </div>
+        <div class="inline-flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm mb-4" style="background: var(--color-primary);">
+         3
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 mb-2">Fast Delivery</h3>
+        <p class="text-slate-500 text-sm">Get your order delivered to your doorstep across Bangladesh</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- Seller Invitation Section -->
+    <section id="seller" class="py-12 md:py-16 bg-white">
+     <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%);">
+       <div class="grid md:grid-cols-2 gap-8 p-8 md:p-12">
+        <div class="text-white">
+         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm mb-6"><span class="w-2 h-2 bg-emerald-400 rounded-full pulse-badge"></span> <span>Join 5,000+ sellers</span>
+         </div>
+         <h2 id="seller-title" class="text-3xl md:text-4xl font-bold mb-4">Sell on TOOFAN</h2>
+         <p class="text-slate-300 text-lg mb-8">Reach millions of customers across Bangladesh. Start your online business today!</p>
+         <div class="space-y-4 mb-8">
+          <div class="flex items-center gap-3">
+           <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+           </div><span>Reach millions of customers</span>
+          </div>
+          <div class="flex items-center gap-3">
+           <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+           </div><span>Easy product upload system</span>
+          </div>
+          <div class="flex items-center gap-3">
+           <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+           </div><span>Low commission rates</span>
+          </div>
+          <div class="flex items-center gap-3">
+           <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+           </div><span>Fast &amp; secure payments</span>
+          </div>
+         </div><a href="#" class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-lg text-slate-900 transition-colors hover:opacity-90" style="background: linear-gradient(135deg, #34D399 0%, #10B981 100%);"> <span>Start Selling Today</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg></a>
+        </div>
+        <div class="hidden md:flex items-center justify-center">
+         <div class="relative">
+          <div class="w-64 h-64 rounded-full bg-emerald-500/10 flex items-center justify-center">
+           <div class="w-48 h-48 rounded-full bg-emerald-500/20 flex items-center justify-center">
+            <div class="text-8xl">
+             🏪
+            </div>
+           </div>
+          </div>
+          <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-4 shadow-xl">
+           <div class="flex items-center gap-2"><span class="text-2xl">📈</span>
+            <div>
+             <p class="text-xs text-slate-500">Monthly Sales</p>
+             <p class="font-bold text-slate-800">৳2.5 Cr+</p>
+            </div>
+           </div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-xl">
+           <div class="flex items-center gap-2"><span class="text-2xl">⭐</span>
+            <div>
+             <p class="text-xs text-slate-500">Avg Rating</p>
+             <p class="font-bold text-slate-800">4.8/5</p>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- SEO Content Section -->
+    <section class="py-12 md:py-16" style="background: var(--color-background);">
+     <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">Your Trusted Online Shopping Destination in Bangladesh</h2>
+      <p class="text-slate-600 leading-relaxed mb-4">Welcome to TOOFAN, Bangladesh's premier online marketplace for quality products and trusted sellers. Whether you're looking for the latest electronics, trendy fashion, home essentials, or fresh groceries, we've got you covered. Our platform connects you with verified merchants across Bangladesh, ensuring safe and secure shopping experiences every time.</p>
+      <p class="text-slate-600 leading-relaxed">With nationwide fast delivery, cash on delivery options, easy returns, and secure payment methods, TOOFAN makes online shopping in Bangladesh convenient and reliable. Join millions of happy customers who trust us for their everyday shopping needs. Start browsing today and discover why we're the best marketplace in Bangladesh for quality products at great prices.</p>
+     </div>
+    </section><!-- Newsletter -->
+    <section class="py-12 md:py-16 bg-white">
+     <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-3xl p-8 md:p-12 text-center" style="background: linear-gradient(135deg, #00875A10 0%, #34D39910 100%);">
+       <div class="text-4xl mb-4">
+        📧
+       </div>
+       <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Get Exclusive Deals</h2>
+       <p class="text-slate-600 mb-6 max-w-md mx-auto">Subscribe to our newsletter and get 10% off your first order plus exclusive deals!</p>
+       <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); handleSubscribe();"><input type="email" placeholder="Enter your email" class="flex-1 px-5 py-3 rounded-full border-2 border-slate-200 focus:border-emerald-500 focus:outline-none" required> <button type="submit" class="px-8 py-3 rounded-full font-bold text-white transition-colors hover:opacity-90" style="background: var(--color-primary);">Subscribe</button>
+       </form>
+      </div>
+     </div>
+    </section>
+   </main><!-- Footer -->
+   <footer class="bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+     <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+      <div class="col-span-2"><a href="#" class="flex items-center gap-2 mb-4">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: var(--color-primary);">
+         <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm0 10c-2.76 0-5-2.24-5-5h2c0 1.66 1.34 3 3 3s3-1.34 3-3h2c0 2.76-2.24 5-5 5z" />
+         </svg>
+        </div><span class="text-xl font-bold">TOOFAN</span> </a>
+       <p class="text-slate-400 text-sm mb-4">Bangladesh's trusted online marketplace for quality products and verified sellers.</p>
+       <div class="flex gap-3"><a href="#" class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+         </svg></a> <a href="#" class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+         </svg></a> <a href="#" class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+         </svg></a>
+       </div>
+      </div>
+      <div>
+       <h4 class="font-bold mb-4">Shop</h4>
+       <ul class="space-y-2 text-sm text-slate-400">
+        <li><a href="#" class="hover:text-white transition-colors">All Products</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Categories</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Flash Sales</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">New Arrivals</a></li>
+       </ul>
+      </div>
+      <div>
+       <h4 class="font-bold mb-4">Support</h4>
+       <ul class="space-y-2 text-sm text-slate-400">
+        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Return Policy</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Track Order</a></li>
+       </ul>
+      </div>
+      <div>
+       <h4 class="font-bold mb-4">Company</h4>
+       <ul class="space-y-2 text-sm text-slate-400">
+        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Seller Policy</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+       </ul>
+      </div>
+     </div>
+     <div class="border-t border-slate-800 pt-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+       <p class="text-sm text-slate-400">© 2024 TOOFAN. All rights reserved.</p>
+       <div class="flex items-center gap-4"><span class="text-sm text-slate-400">Payment Methods:</span>
+        <div class="flex gap-2">
+         <div class="px-3 py-1 bg-slate-800 rounded text-xs font-medium">
+          bKash
+         </div>
+         <div class="px-3 py-1 bg-slate-800 rounded text-xs font-medium">
+          Nagad
+         </div>
+         <div class="px-3 py-1 bg-slate-800 rounded text-xs font-medium">
+          Visa
+         </div>
+         <div class="px-3 py-1 bg-slate-800 rounded text-xs font-medium">
+          COD
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      hero_headline: "Bangladesh's Trusted Online Marketplace for Quality & Value",
+      hero_subheadline: "Shop verified products from us and trusted local sellers — delivered fast to your doorstep.",
+      trust_badge_1: "100% Verified",
+      trust_badge_2: "Fast Delivery",
+      seller_cta_title: "Sell on TOOFAN",
+      background_color: "#F8FAFC",
+      surface_color: "#FFFFFF",
+      text_color: "#1E293B",
+      primary_color: "#00875A",
+      secondary_color: "#DC2626"
+    };
+    
+    let config = { ...defaultConfig };
+    
+    // Countdown Timer
+    function updateCountdown() {
+      const now = new Date();
+      const endOfDay = new Date();
+      endOfDay.setHours(23, 59, 59, 999);
+      
+      const diff = endOfDay - now;
+      
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      
+      if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+      if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+      if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    
+    // Shopping Cart Management
+    let cartItems = [];
+    let selectedProduct = null;
+    
+    function updateCartBadge() {
+      const badge = document.querySelector('.cart-badge');
+      if (badge) {
+        badge.textContent = cartItems.length;
+        badge.style.display = cartItems.length > 0 ? 'flex' : 'flex';
+      }
+    }
+    
+    function addToCart(product) {
+      const existingItem = cartItems.find(item => item.id === product.id);
+      
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cartItems.push({ ...product, quantity: 1 });
+      }
+      
+      updateCartBadge();
+      showCartNotification(product.name);
+    }
+    
+    function showCartNotification(productName) {
+      const notification = document.createElement('div');
+      notification.className = 'fixed top-24 right-4 z-50 bg-white rounded-2xl shadow-2xl p-4 flex items-center gap-3 border-2 animate-slide-in';
+      notification.style.borderColor = 'var(--color-primary)';
+      notification.style.animation = 'slideIn 0.3s ease-out';
+      
+      notification.innerHTML = `
+        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: var(--color-primary);">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="font-bold text-slate-800 text-sm">Added to cart!</p>
+          <p class="text-xs text-slate-500">${productName}</p>
+        </div>
+      `;
+      
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease-out';
+        setTimeout(() => notification.remove(), 300);
+      }, 2500);
+    }
+    
+    function removeFromCart(productId) {
+      cartItems = cartItems.filter(item => item.id !== productId);
+      updateCartBadge();
+      renderCartModal();
+    }
+    
+    function updateCartQuantity(productId, change) {
+      const item = cartItems.find(item => item.id === productId);
+      if (item) {
+        item.quantity += change;
+        if (item.quantity <= 0) {
+          removeFromCart(productId);
+        } else {
+          renderCartModal();
+        }
+      }
+    }
+    
+    function getCartTotal() {
+      return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+    }
+    
+    function openCartModal() {
+      renderCartModal();
+      const modal = document.getElementById('cart-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+    
+    function closeCartModal() {
+      const modal = document.getElementById('cart-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+    
+    function renderCartModal() {
+      let cartModal = document.getElementById('cart-modal');
+      
+      if (!cartModal) {
+        cartModal = document.createElement('div');
+        cartModal.id = 'cart-modal';
+        cartModal.className = 'hidden fixed inset-0 z-50 items-center justify-center bg-black/50 backdrop-blur-sm';
+        cartModal.onclick = (e) => {
+          if (e.target === cartModal) closeCartModal();
+        };
+        document.body.appendChild(cartModal);
+      }
+      
+      const cartContent = cartItems.length === 0 ? `
+        <div class="text-center py-12">
+          <div class="text-6xl mb-4">🛒</div>
+          <h3 class="text-xl font-bold text-slate-800 mb-2">Your cart is empty</h3>
+          <p class="text-slate-500 mb-6">Add some products to get started!</p>
+          <button onclick="closeCartModal()" class="px-6 py-3 rounded-full font-semibold text-white" style="background: var(--color-primary);">
+            Continue Shopping
+          </button>
+        </div>
+      ` : `
+        <div class="flex-1 overflow-y-auto mb-4">
+          ${cartItems.map(item => `
+            <div class="flex gap-4 p-4 bg-slate-50 rounded-2xl mb-3">
+              <div class="w-20 h-20 rounded-xl bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-3xl flex-shrink-0">
+                ${item.emoji}
+              </div>
+              <div class="flex-1">
+                <h4 class="font-semibold text-slate-800 text-sm mb-1">${item.name}</h4>
+                <p class="text-sm font-bold mb-2" style="color: var(--color-primary);">৳${item.price.toLocaleString()}</p>
+                <div class="flex items-center gap-2">
+                  <button onclick="updateCartQuantity('${item.id}', -1)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-100 transition-colors">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                    </svg>
+                  </button>
+                  <span class="text-sm font-medium px-3">${item.quantity}</span>
+                  <button onclick="updateCartQuantity('${item.id}', 1)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-100 transition-colors">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button onclick="removeFromCart('${item.id}')" class="text-red-500 hover:text-red-700 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                </svg>
+              </button>
+            </div>
+          `).join('')}
+        </div>
+        
+        <div class="border-t border-slate-200 pt-4">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-slate-600">Subtotal:</span>
+            <span class="text-xl font-bold" style="color: var(--color-primary);">৳${getCartTotal().toLocaleString()}</span>
+          </div>
+          <button class="w-full py-4 rounded-full font-bold text-white text-lg hover:opacity-90 transition-colors" style="background: var(--color-primary);">
+            Proceed to Checkout
+          </button>
+        </div>
+      `;
+      
+      cartModal.innerHTML = `
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-md mx-4 max-h-[90vh] flex flex-col" onclick="event.stopPropagation()">
+          <div class="flex items-center justify-between p-6 border-b border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-800">Shopping Cart</h2>
+            <button onclick="closeCartModal()" class="w-10 h-10 rounded-full hover:bg-slate-100 flex items-center justify-center transition-colors">
+              <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          <div class="p-6 flex-1 overflow-y-auto flex flex-col">
+            ${cartContent}
+          </div>
+        </div>
+      `;
+    }
+    
+    // Product Detail Modal
+    function openProductDetail(product) {
+      selectedProduct = product;
+      renderProductDetail();
+      const modal = document.getElementById('product-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+    
+    function closeProductDetail() {
+      const modal = document.getElementById('product-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+      selectedProduct = null;
+    }
+    
+    function renderProductDetail() {
+      if (!selectedProduct) return;
+      
+      let productModal = document.getElementById('product-modal');
+      
+      if (!productModal) {
+        productModal = document.createElement('div');
+        productModal.id = 'product-modal';
+        productModal.className = 'hidden fixed inset-0 z-50 items-center justify-center bg-black/50 backdrop-blur-sm overflow-y-auto p-4';
+        productModal.onclick = (e) => {
+          if (e.target === productModal) closeProductDetail();
+        };
+        document.body.appendChild(productModal);
+      }
+      
+      const sellerBadge = selectedProduct.seller ? `
+        <div class="inline-flex items-center gap-2 mb-4">
+          <span class="inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+            Verified Seller
+          </span>
+          <span class="text-sm text-slate-600">${selectedProduct.seller}</span>
+          <span class="text-yellow-400 text-sm">★ ${selectedProduct.sellerRating}</span>
+        </div>
+      ` : `
+        <div class="inline-flex items-center gap-2 text-white text-sm font-bold px-4 py-2 rounded-full mb-4" style="background: var(--color-primary);">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          Sold by TOOFAN
+        </div>
+      `;
+      
+      productModal.innerHTML = `
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl mx-auto my-8" onclick="event.stopPropagation()">
+          <div class="flex items-center justify-between p-6 border-b border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-800">Product Details</h2>
+            <button onclick="closeProductDetail()" class="w-10 h-10 rounded-full hover:bg-slate-100 flex items-center justify-center transition-colors">
+              <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="p-6 md:p-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <div class="aspect-square rounded-3xl bg-gradient-to-br ${selectedProduct.gradient} flex items-center justify-center text-9xl mb-4 shadow-lg">
+                  ${selectedProduct.emoji}
+                </div>
+                <div class="grid grid-cols-4 gap-2">
+                  <div class="aspect-square rounded-xl bg-gradient-to-br ${selectedProduct.gradient} flex items-center justify-center text-3xl opacity-50 cursor-pointer hover:opacity-100 transition-opacity">
+                    ${selectedProduct.emoji}
+                  </div>
+                  <div class="aspect-square rounded-xl bg-slate-100 flex items-center justify-center text-2xl opacity-30">📷</div>
+                  <div class="aspect-square rounded-xl bg-slate-100 flex items-center justify-center text-2xl opacity-30">📷</div>
+                  <div class="aspect-square rounded-xl bg-slate-100 flex items-center justify-center text-2xl opacity-30">📷</div>
+                </div>
+              </div>
+              
+              <div class="flex flex-col">
+                ${sellerBadge}
+                
+                <h1 class="text-3xl font-bold text-slate-800 mb-3">${selectedProduct.name}</h1>
+                
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex items-center gap-1">
+                    <span class="text-yellow-400 text-lg">★★★★★</span>
+                    <span class="text-sm font-medium text-slate-700">${selectedProduct.rating}</span>
+                  </div>
+                  <span class="text-slate-400">|</span>
+                  <span class="text-sm text-slate-600">${selectedProduct.reviews} Reviews</span>
+                  <span class="text-slate-400">|</span>
+                  <span class="text-sm text-emerald-600 font-medium">In Stock</span>
+                </div>
+                
+                <div class="flex items-baseline gap-3 mb-6">
+                  <span class="text-4xl font-bold" style="color: var(--color-primary);">৳${selectedProduct.price.toLocaleString()}</span>
+                  ${selectedProduct.oldPrice ? `<span class="text-xl text-slate-400 line-through">৳${selectedProduct.oldPrice.toLocaleString()}</span>` : ''}
+                  ${selectedProduct.discount ? `<span class="bg-red-100 text-red-600 text-sm font-bold px-3 py-1 rounded-full">-${selectedProduct.discount}%</span>` : ''}
+                </div>
+                
+                <div class="bg-slate-50 rounded-2xl p-4 mb-6">
+                  <h3 class="font-bold text-slate-800 mb-3">Key Features:</h3>
+                  <ul class="space-y-2 text-sm text-slate-600">
+                    ${selectedProduct.features.map(feature => `
+                      <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <span>${feature}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+                
+                <div class="flex items-center gap-3 mb-6">
+                  <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm text-slate-600">Free delivery on orders over ৳999</span>
+                </div>
+                
+                <div class="flex gap-3 mt-auto">
+                  <button onclick="addToCart(selectedProduct); showCartNotification('${selectedProduct.name}');" class="flex-1 py-4 rounded-full font-bold text-white text-lg hover:opacity-90 transition-colors shadow-lg" style="background: var(--color-primary);">
+                    Add to Cart
+                  </button>
+                  <button class="w-14 h-14 rounded-full border-2 flex items-center justify-center hover:bg-slate-50 transition-colors" style="border-color: var(--color-primary);">
+                    <svg class="w-6 h-6" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 border-t border-slate-200 pt-8">
+              <h3 class="text-xl font-bold text-slate-800 mb-4">Product Description</h3>
+              <p class="text-slate-600 leading-relaxed">${selectedProduct.description}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    
+    // Newsletter subscription handler
+    function handleSubscribe() {
+      const form = event.target;
+      const email = form.querySelector('input[type="email"]').value;
+      const button = form.querySelector('button');
+      
+      button.textContent = 'Subscribed! ✓';
+      button.style.background = '#059669';
+      form.querySelector('input[type="email"]').value = '';
+      
+      setTimeout(() => {
+        button.textContent = 'Subscribe';
+        button.style.background = 'var(--color-primary)';
+      }, 3000);
+    }
+    
+    // Product data
+    const products = {
+      'smartphone': {
+        id: 'smartphone',
+        name: 'Flagship Smartphone 128GB',
+        price: 32999,
+        oldPrice: 39999,
+        discount: 18,
+        rating: 4.8,
+        reviews: 523,
+        emoji: '📱',
+        gradient: 'from-violet-100 to-violet-200',
+        seller: null,
+        description: 'Experience the ultimate smartphone with our flagship model. Featuring a stunning display, powerful processor, and advanced camera system. Perfect for photography, gaming, and everyday use. Comes with 128GB storage and 8GB RAM for seamless multitasking.',
+        features: [
+          '6.7" AMOLED Display with 120Hz refresh rate',
+          '108MP Triple Camera System with Night Mode',
+          'Snapdragon 8 Gen 2 Processor',
+          '5000mAh Battery with 65W Fast Charging',
+          '128GB Storage + 8GB RAM'
+        ]
+      },
+      'cookware': {
+        id: 'cookware',
+        name: 'Non-Stick Cookware Set',
+        price: 4599,
+        oldPrice: 5999,
+        discount: 23,
+        rating: 4.9,
+        reviews: 312,
+        emoji: '🍳',
+        gradient: 'from-orange-100 to-orange-200',
+        seller: null,
+        description: 'Premium quality non-stick cookware set perfect for your kitchen. Made with high-grade materials that ensure even heat distribution. The non-stick coating makes cooking and cleaning effortless. Includes 5 essential pieces for all your cooking needs.',
+        features: [
+          '5-piece professional cookware set',
+          'Triple-layer non-stick coating',
+          'Heat-resistant handles up to 180°C',
+          'Compatible with all cooktops',
+          'Easy to clean and dishwasher safe'
+        ]
+      },
+      'shoes': {
+        id: 'shoes',
+        name: 'Premium Running Shoes',
+        price: 2799,
+        oldPrice: 3499,
+        discount: 20,
+        rating: 4.7,
+        reviews: 287,
+        emoji: '👟',
+        gradient: 'from-rose-100 to-rose-200',
+        seller: null,
+        description: 'Engineered for performance and comfort. These premium running shoes feature advanced cushioning technology and breathable mesh upper. Perfect for running, jogging, gym workouts, or casual wear. Available in multiple colors and sizes.',
+        features: [
+          'Advanced cushioning for maximum comfort',
+          'Breathable mesh upper for ventilation',
+          'Anti-slip rubber outsole',
+          'Lightweight design (only 280g)',
+          'Ergonomic fit for all-day wear'
+        ]
+      },
+      'laptop-stand': {
+        id: 'laptop-stand',
+        name: 'Laptop Stand Aluminum',
+        price: 1899,
+        oldPrice: 2499,
+        discount: 24,
+        rating: 4.6,
+        reviews: 198,
+        emoji: '💻',
+        gradient: 'from-cyan-100 to-cyan-200',
+        seller: null,
+        description: 'Elevate your workspace with this premium aluminum laptop stand. Ergonomically designed to reduce neck and back strain. Features adjustable height and angle for optimal viewing position. Compatible with all laptop sizes from 10" to 17".',
+        features: [
+          'Premium aluminum construction',
+          'Adjustable height (7 positions)',
+          'Supports laptops 10"-17"',
+          'Non-slip silicone pads',
+          'Portable and foldable design'
+        ]
+      },
+      'backpack': {
+        id: 'backpack',
+        name: 'Anti-Theft Laptop Backpack',
+        price: 1599,
+        oldPrice: 2199,
+        discount: 27,
+        rating: 4.8,
+        reviews: 456,
+        emoji: '🎒',
+        gradient: 'from-indigo-100 to-indigo-200',
+        seller: 'TechStore BD',
+        sellerRating: 4.8,
+        description: 'Smart and secure laptop backpack with anti-theft design. Features hidden zippers, USB charging port, and water-resistant material. Perfect for daily commute, travel, or college. Fits laptops up to 15.6 inches with multiple compartments for organization.',
+        features: [
+          'Anti-theft hidden zipper design',
+          'Built-in USB charging port',
+          'Water-resistant polyester fabric',
+          'Padded laptop compartment (15.6")',
+          'Multiple pockets for organization'
+        ]
+      },
+      'jacket': {
+        id: 'jacket',
+        name: 'Winter Jacket Premium',
+        price: 2899,
+        oldPrice: 3999,
+        discount: 28,
+        rating: 4.9,
+        reviews: 321,
+        emoji: '🧥',
+        gradient: 'from-teal-100 to-teal-200',
+        seller: 'Fashion Hub',
+        sellerRating: 4.9,
+        description: 'Stay warm and stylish with our premium winter jacket. Made from high-quality materials with excellent insulation. Features water-resistant outer shell and comfortable inner lining. Perfect for cold weather with multiple pockets for convenience.',
+        features: [
+          'Water-resistant outer shell',
+          'Thermal insulation for warmth',
+          'Removable hood with fur trim',
+          'Multiple zipper pockets',
+          'Available in S, M, L, XL sizes'
+        ]
+      }
+    };
+    
+    // Add click handlers to product cards
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartBadge();
+    });
+    
+    // onConfigChange function - updates UI based on config
+    async function onConfigChange(newConfig) {
+      config = { ...defaultConfig, ...newConfig };
+      
+      const customFont = config.font_family || 'Plus Jakarta Sans';
+      const baseFontStack = 'Plus Jakarta Sans, Hind Siliguri, sans-serif';
+      const fontStack = customFont !== 'Plus Jakarta Sans' ? `${customFont}, ${baseFontStack}` : baseFontStack;
+      
+      // Apply font to body
+      document.body.style.fontFamily = fontStack;
+      
+      // Update text content
+      const heroHeadline = document.getElementById('hero-headline');
+      if (heroHeadline) heroHeadline.textContent = config.hero_headline || defaultConfig.hero_headline;
+      
+      const heroSubheadline = document.getElementById('hero-subheadline');
+      if (heroSubheadline) heroSubheadline.textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
+      
+      const trustText1 = document.getElementById('trust-text-1');
+      if (trustText1) trustText1.textContent = config.trust_badge_1 || defaultConfig.trust_badge_1;
+      
+      const trustText2 = document.getElementById('trust-text-2');
+      if (trustText2) trustText2.textContent = config.trust_badge_2 || defaultConfig.trust_badge_2;
+      
+      const sellerTitle = document.getElementById('seller-title');
+      if (sellerTitle) sellerTitle.textContent = config.seller_cta_title || defaultConfig.seller_cta_title;
+      
+      // Apply colors
+      document.documentElement.style.setProperty('--color-background', config.background_color || defaultConfig.background_color);
+      document.documentElement.style.setProperty('--color-surface', config.surface_color || defaultConfig.surface_color);
+      document.documentElement.style.setProperty('--color-text', config.text_color || defaultConfig.text_color);
+      document.documentElement.style.setProperty('--color-primary', config.primary_color || defaultConfig.primary_color);
+      document.documentElement.style.setProperty('--color-secondary', config.secondary_color || defaultConfig.secondary_color);
+      
+      // Apply background color to body
+      document.body.style.backgroundColor = config.background_color || defaultConfig.background_color;
+      
+      // Apply text color
+      document.body.style.color = config.text_color || defaultConfig.text_color;
+    }
+    
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (cfg) => ({
+          recolorables: [
+            {
+              get: () => cfg.background_color || defaultConfig.background_color,
+              set: (value) => {
+                cfg.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => cfg.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                cfg.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => cfg.text_color || defaultConfig.text_color,
+              set: (value) => {
+                cfg.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => cfg.primary_color || defaultConfig.primary_color,
+              set: (value) => {
+                cfg.primary_color = value;
+                window.elementSdk.setConfig({ primary_color: value });
+              }
+            },
+            {
+              get: () => cfg.secondary_color || defaultConfig.secondary_color,
+              set: (value) => {
+                cfg.secondary_color = value;
+                window.elementSdk.setConfig({ secondary_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => cfg.font_family || defaultConfig.font_family || 'Plus Jakarta Sans',
+            set: (value) => {
+              cfg.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (cfg) => new Map([
+          ['hero_headline', cfg.hero_headline || defaultConfig.hero_headline],
+          ['hero_subheadline', cfg.hero_subheadline || defaultConfig.hero_subheadline],
+          ['trust_badge_1', cfg.trust_badge_1 || defaultConfig.trust_badge_1],
+          ['trust_badge_2', cfg.trust_badge_2 || defaultConfig.trust_badge_2],
+          ['seller_cta_title', cfg.seller_cta_title || defaultConfig.seller_cta_title]
+        ])
+      });
+    }
+    
+    // Initial render
+    onConfigChange(config);
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c03bf2e67a9ba5f',t:'MTc2ODc5ODU5OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
