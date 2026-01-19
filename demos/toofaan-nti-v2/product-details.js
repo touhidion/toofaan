@@ -7,10 +7,15 @@ const allProducts = {
         originalPrice: 4500,
         rating: 4.8,
         reviews: 234,
+        category: "Electronics",
         merchant: "Tech Mart BD",
         merchantAvatar: "TM",
         verified: true,
         badge: "Sale",
+        shipping: "Free Delivery",
+        warranty: "1 Year Official Warranty",
+        emi: "Up to 12 months EMI available",
+        deliveryTime: "24-48 Hours",
         images: [
             "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop",
             "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=800&fit=crop",
@@ -46,10 +51,15 @@ const allProducts = {
         originalPrice: 900,
         rating: 4.6,
         reviews: 156,
+        category: "Fashion",
         merchant: "Fashion Hub",
         merchantAvatar: "FH",
         verified: true,
         badge: "New",
+        shipping: "Standard Delivery",
+        warranty: "No Warranty",
+        emi: "Not Available",
+        deliveryTime: "3-5 Days",
         images: [
             "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop",
             "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&h=800&fit=crop",
@@ -85,10 +95,15 @@ const allProducts = {
         originalPrice: 12000,
         rating: 4.9,
         reviews: 445,
+        category: "Electronics",
         merchant: "Tech Mart BD",
         merchantAvatar: "TM",
         verified: true,
         badge: "Sale",
+        shipping: "Free Delivery",
+        warranty: "1 Year Brand Warranty",
+        emi: "0% EMI available",
+        deliveryTime: "24 Hours",
         images: [
             "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop",
             "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&h=800&fit=crop",
@@ -124,10 +139,15 @@ const allProducts = {
         originalPrice: 1800,
         rating: 4.7,
         reviews: 89,
+        category: "Home & Living",
         merchant: "Home Luxe",
         merchantAvatar: "HL",
         verified: true,
         badge: "Sale",
+        shipping: "Standard Delivery",
+        warranty: "6 Months Warranty",
+        emi: "Not Available",
+        deliveryTime: "2-3 Days",
         images: [
             "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&h=800&fit=crop",
             "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&h=800&fit=crop",
@@ -281,10 +301,15 @@ const allProducts = {
         originalPrice: 1200,
         rating: 4.6,
         reviews: 134,
+        category: "Home & Living",
         merchant: "Home Luxe",
         merchantAvatar: "HL",
         verified: true,
         badge: "Sale",
+        shipping: "Standard Delivery",
+        warranty: "3 Months Warranty",
+        emi: "Not Available",
+        deliveryTime: "2-3 Days",
         images: [
             "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&h=800&fit=crop",
             "https://images.unsplash.com/photo-1517256673644-36ad11246d21?w=800&h=800&fit=crop",
@@ -311,6 +336,44 @@ const allProducts = {
             "Design": "Modern Minimalist",
             "Package": "Gift Box Included",
             "Warranty": "3 Months"
+        }
+    },
+    9: {
+        id: 9,
+        name: "Ultra-Fast NVMe SSD 1TB",
+        price: 12500,
+        originalPrice: 15000,
+        rating: 4.9,
+        reviews: 128,
+        category: "Electronics",
+        merchant: "Tech Mart BD",
+        merchantAvatar: "TM",
+        verified: true,
+        badge: "Pop",
+        shipping: "Free Delivery",
+        warranty: "5 Years Brand Warranty",
+        emi: "EMI from ৳1,042/month",
+        deliveryTime: "24 Hours",
+        images: [
+            "https://images.unsplash.com/photo-1591405351990-4726e33df584?w=800&h=800&fit=crop",
+            "https://images.unsplash.com/photo-1599661430030-9b422f87ee81?w=800&h=800&fit=crop"
+        ],
+        description: "Boost your computer's speed with the Ultra-Fast NVMe SSD. Featuring 1TB capacity and incredible read/write speeds, it's perfect for gaming, video editing, and heavy workloads. Reliable and durable with a 5-year warranty.",
+        features: [
+            "Up to 3500MB/s Read Speed",
+            "1TB Storage Capacity",
+            "Compact NVMe M.2 Factor",
+            "Low Power Consumption",
+            "Advanced Heat Dissipation"
+        ],
+        specs: {
+            "Brand": "SpeedPro",
+            "Model": "NV1000",
+            "Capacity": "1TB",
+            "Interface": "NVMe PCIe Gen 3x4",
+            "Read Speed": "3500 MB/s",
+            "Write Speed": "3000 MB/s",
+            "Warranty": "5 Years"
         }
     }
 };
@@ -641,6 +704,12 @@ function loadProductDetails() {
     // Update badge
     document.querySelector('.product-badge').textContent = `${savingsPercent}% OFF`;
     document.querySelector('.product-badge').className = `product-badge ${product.badge.toLowerCase()}`;
+
+    // Update Service Sidebar
+    document.getElementById('deliveryTimeVal').textContent = product.deliveryTime;
+    document.getElementById('shippingCostVal').textContent = product.shipping;
+    document.getElementById('warrantyVal').textContent = product.warranty;
+    document.getElementById('emiVal').textContent = product.emi;
 
     // Update features
     const featuresList = document.querySelector('.product-highlights ul');
