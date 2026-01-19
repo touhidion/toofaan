@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="bn" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TOOFAN - বাংলাদেশের সেরা অনলাইন মার্কেটপ্লেস। হাজারো পণ্য, সেরা দাম, দ্রুত ডেলিভারি। নিজের পণ্য বিক্রি করুন বা কিনুন সেরা মার্চেন্টদের থেকে।">
+  <meta name="keywords" content="online shopping bangladesh, বাংলাদেশ অনলাইন শপিং, e-commerce bd, marketplace bangladesh">
+  <title>TOOFAN - বাংলাদেশের সেরা অনলাইন মার্কেটপ্লেস</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+    }
+    
+    .bengali-text {
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+    
+    .gradient-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0d9488 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .shimmer {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 2s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .pulse-dot {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.1); }
+    }
+    
+    .scroll-container {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .merchant-badge {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+    
+    .own-product-badge {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-slate-50">
+  <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Promo Banner -->
+   <div id="promo-banner" class="bg-gradient-to-r from-teal-600 via-teal-500 to-emerald-500 text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 text-sm"><span class="pulse-dot">🚚</span> <span id="promo-text" class="bengali-text font-medium">ঢাকায় ৫০০৳+ অর্ডারে ফ্রি ডেলিভারি! কোড: FREEDEL</span> <span class="pulse-dot">🎁</span>
+    </div>
+   </div><!-- Header -->
+   <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+     <div class="flex items-center justify-between gap-4"><!-- Logo -->
+      <div class="flex items-center gap-2">
+       <div class="w-10 h-10 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+       </div>
+       <div>
+        <h1 id="site-name" class="text-xl font-bold text-slate-800">TOOFAN</h1>
+        <p id="tagline" class="text-xs text-slate-500 bengali-text">সবার জন্য সব কিছু</p>
+       </div>
+      </div><!-- Search Bar -->
+      <div class="hidden md:flex flex-1 max-w-xl">
+       <div class="relative w-full"><input type="text" placeholder="আপনি কী খুঁজছেন?" class="bengali-text w-full pl-12 pr-4 py-3 bg-slate-100 border-0 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+       </div>
+      </div><!-- Nav Icons -->
+      <div class="flex items-center gap-3"><button class="hidden sm:flex items-center gap-2 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-full font-medium transition-all text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg><span class="bengali-text">বিক্রি করুন</span> </button> <button class="relative p-2 hover:bg-slate-100 rounded-full transition-all">
+        <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg><span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">3</span> </button> <button class="relative p-2 hover:bg-slate-100 rounded-full transition-all">
+        <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg><span class="absolute -top-1 -right-1 w-5 h-5 bg-teal-500 text-white text-xs rounded-full flex items-center justify-center">5</span> </button> <button class="p-2 hover:bg-slate-100 rounded-full transition-all">
+        <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg></button>
+      </div>
+     </div><!-- Mobile Search -->
+     <div class="mt-3 md:hidden">
+      <div class="relative"><input type="text" placeholder="আপনি কী খুঁজছেন?" class="bengali-text w-full pl-10 pr-4 py-2.5 bg-slate-100 border-0 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500">
+       <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+       </svg>
+      </div>
+     </div><!-- Category Nav -->
+     <nav class="mt-3 -mx-4 px-4 overflow-x-auto scroll-container">
+      <ul class="flex gap-6 text-sm font-medium whitespace-nowrap pb-2">
+       <li><a href="#" class="text-teal-600 border-b-2 border-teal-600 pb-2 bengali-text">সকল ক্যাটাগরি</a></li>
+       <li><a href="#" class="text-slate-600 hover:text-teal-600 transition-colors bengali-text">ফ্যাশন</a></li>
+       <li><a href="#" class="text-slate-600 hover:text-teal-600 transition-colors bengali-text">ইলেকট্রনিক্স</a></li>
+       <li><a href="#" class="text-slate-600 hover:text-teal-600 transition-colors bengali-text">হোম ও লাইফস্টাইল</a></li>
+       <li><a href="#" class="text-slate-600 hover:text-teal-600 transition-colors bengali-text">বিউটি</a></li>
+       <li><a href="#" class="text-slate-600 hover:text-teal-600 transition-colors bengali-text">গ্রোসারি</a></li>
+       <li><a href="#" class="text-slate-600 hover:text-teal-600 transition-colors flex items-center gap-1"><span class="bengali-text">মার্চেন্ট শপ</span> <span class="text-amber-500">✦</span></a></li>
+      </ul>
+     </nav>
+    </div>
+   </header>
+   <main><!-- Hero Section -->
+    <section class="gradient-hero text-white py-12 md:py-20 px-4 relative overflow-hidden">
+     <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-32 h-32 border border-white rounded-full"></div>
+      <div class="absolute bottom-10 right-20 w-48 h-48 border border-white rounded-full"></div>
+      <div class="absolute top-1/2 left-1/3 w-20 h-20 border border-white rounded-full"></div>
+     </div>
+     <div class="max-w-7xl mx-auto relative">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+       <div class="text-center md:text-left">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full mb-6"><span class="w-2 h-2 bg-emerald-400 rounded-full pulse-dot"></span> <span class="text-sm bengali-text">🎉 নতুন মার্চেন্ট বোনাস - ৫০% কমিশন ছাড়!</span>
+        </div>
+        <h2 id="hero-title" class="text-3xl md:text-5xl font-bold mb-4 leading-tight bengali-text">বাংলাদেশের সবচেয়ে বড় <br class="hidden md:block"><span class="text-emerald-400">অনলাইন মার্কেটপ্লেস</span></h2>
+        <p id="hero-subtitle" class="text-lg text-slate-300 mb-8 bengali-text">হাজারো বিক্রেতার লক্ষাধিক পণ্য, সেরা দামে। নিজে বিক্রি করুন অথবা কিনুন বিশ্বস্ত মার্চেন্টদের থেকে।</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"><button id="cta-button" class="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-emerald-500/30 bengali-text"> 🛒 শপিং শুরু করুন </button> <button class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-full transition-all border border-white/30 bengali-text"> 📦 বিক্রেতা হন </button>
+        </div>
+       </div>
+       <div class="hidden md:block relative">
+        <div class="float-animation">
+         <div class="bg-white rounded-3xl p-6 shadow-2xl max-w-sm mx-auto transform rotate-3">
+          <div class="flex items-center gap-3 mb-4">
+           <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center text-2xl">
+            👕
+           </div>
+           <div>
+            <p class="font-semibold text-slate-800 bengali-text">প্রিমিয়াম পাঞ্জাবি</p>
+            <p class="text-sm text-slate-500 bengali-text">ফ্যাশন হাট</p>
+           </div><span class="ml-auto merchant-badge text-white text-xs px-2 py-1 rounded-full">Merchant</span>
+          </div>
+          <div class="h-32 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl mb-4 flex items-center justify-center text-6xl">
+           👔
+          </div>
+          <div class="flex items-center justify-between">
+           <div>
+            <p class="text-2xl font-bold text-slate-800">৳১,২৫০</p>
+            <p class="text-sm text-slate-400 line-through">৳১,৮০০</p>
+           </div><button class="px-4 py-2 bg-teal-500 text-white rounded-full text-sm font-medium bengali-text">কার্টে যোগ</button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Trust Badges -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+       <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+        <p class="text-3xl font-bold text-emerald-400">৫০K+</p>
+        <p class="text-sm text-slate-300 bengali-text">সক্রিয় পণ্য</p>
+       </div>
+       <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+        <p class="text-3xl font-bold text-amber-400">২K+</p>
+        <p class="text-sm text-slate-300 bengali-text">বিশ্বস্ত মার্চেন্ট</p>
+       </div>
+       <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+        <p class="text-3xl font-bold text-cyan-400">১০০K+</p>
+        <p class="text-sm text-slate-300 bengali-text">সন্তুষ্ট গ্রাহক</p>
+       </div>
+       <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+        <p class="text-3xl font-bold text-pink-400">৬৪</p>
+        <p class="text-sm text-slate-300 bengali-text">জেলায় ডেলিভারি</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- Categories -->
+    <section class="py-12 px-4 bg-white">
+     <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between mb-8">
+       <h3 class="text-2xl font-bold text-slate-800 bengali-text">জনপ্রিয় ক্যাটাগরি</h3><a href="#" class="text-teal-600 hover:text-teal-700 font-medium text-sm bengali-text">সব দেখুন →</a>
+      </div>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-4"><a href="#" class="group text-center">
+        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl flex items-center justify-center text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">
+         👗
+        </div><p class="text-sm font-medium text-slate-700 bengali-text">ফ্যাশন</p></a> <a href="#" class="group text-center">
+        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">
+         📱
+        </div><p class="text-sm font-medium text-slate-700 bengali-text">ইলেকট্রনিক্স</p></a> <a href="#" class="group text-center">
+        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">
+         🏠
+        </div><p class="text-sm font-medium text-slate-700 bengali-text">হোম</p></a> <a href="#" class="group text-center">
+        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">
+         💄
+        </div><p class="text-sm font-medium text-slate-700 bengali-text">বিউটি</p></a> <a href="#" class="group text-center">
+        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">
+         🥬
+        </div><p class="text-sm font-medium text-slate-700 bengali-text">গ্রোসারি</p></a> <a href="#" class="group text-center">
+        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">
+         🎮
+        </div><p class="text-sm font-medium text-slate-700 bengali-text">গেমিং</p></a>
+      </div>
+     </div>
+    </section><!-- Flash Sale -->
+    <section class="py-12 px-4 bg-gradient-to-r from-red-500 via-orange-500 to-amber-500">
+     <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+       <div class="flex items-center gap-4">
+        <div class="bg-white rounded-xl px-4 py-2"><span class="text-2xl">⚡</span>
+        </div>
+        <div>
+         <h3 class="text-2xl font-bold text-white bengali-text">ফ্ল্যাশ সেল</h3>
+         <p class="text-white/80 text-sm bengali-text">৭০% পর্যন্ত ছাড়!</p>
+        </div>
+       </div>
+       <div class="flex items-center gap-2"><span class="text-white/80 text-sm bengali-text">শেষ হবে:</span>
+        <div class="flex gap-1"><span class="bg-white text-red-600 font-bold px-3 py-2 rounded-lg" id="hours">05</span> <span class="text-white font-bold py-2">:</span> <span class="bg-white text-red-600 font-bold px-3 py-2 rounded-lg" id="minutes">42</span> <span class="text-white font-bold py-2">:</span> <span class="bg-white text-red-600 font-bold px-3 py-2 rounded-lg" id="seconds">18</span>
+        </div>
+       </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"><!-- Flash Sale Products -->
+       <div class="bg-white rounded-2xl p-3 card-hover">
+        <div class="relative">
+         <div class="h-32 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-5xl">
+          👟
+         </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-50%</span> <span class="absolute top-2 right-2 own-product-badge text-white text-xs px-2 py-0.5 rounded">Our Pick</span>
+        </div>
+        <div class="mt-3">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">স্পোর্টস স্নিকার্স</p>
+         <div class="flex items-center gap-2 mt-1">
+          <p class="text-lg font-bold text-red-600">৳৯৯৯</p>
+          <p class="text-xs text-slate-400 line-through">৳১,৯৯৯</p>
+         </div>
+         <div class="flex items-center gap-1 mt-2">
+          <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+           <div class="h-full bg-red-500 rounded-full" style="width: 75%"></div>
+          </div><span class="text-xs text-slate-500 bengali-text">২৫টি বাকি</span>
+         </div>
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-3 card-hover">
+        <div class="relative">
+         <div class="h-32 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-5xl">
+          🎧
+         </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-40%</span> <span class="absolute top-2 right-2 merchant-badge text-white text-xs px-2 py-0.5 rounded">Merchant</span>
+        </div>
+        <div class="mt-3">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">ব্লুটুথ হেডফোন</p>
+         <div class="flex items-center gap-2 mt-1">
+          <p class="text-lg font-bold text-red-600">৳৮৫০</p>
+          <p class="text-xs text-slate-400 line-through">৳১,৪১৭</p>
+         </div>
+         <div class="flex items-center gap-1 mt-2">
+          <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+           <div class="h-full bg-red-500 rounded-full" style="width: 60%"></div>
+          </div><span class="text-xs text-slate-500 bengali-text">৪০টি বাকি</span>
+         </div>
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-3 card-hover">
+        <div class="relative">
+         <div class="h-32 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-5xl">
+          ⌚
+         </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-60%</span> <span class="absolute top-2 right-2 own-product-badge text-white text-xs px-2 py-0.5 rounded">Our Pick</span>
+        </div>
+        <div class="mt-3">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">স্মার্ট ওয়াচ</p>
+         <div class="flex items-center gap-2 mt-1">
+          <p class="text-lg font-bold text-red-600">৳১,২০০</p>
+          <p class="text-xs text-slate-400 line-through">৳৩,০০০</p>
+         </div>
+         <div class="flex items-center gap-1 mt-2">
+          <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+           <div class="h-full bg-red-500 rounded-full" style="width: 85%"></div>
+          </div><span class="text-xs text-slate-500 bengali-text">১৫টি বাকি</span>
+         </div>
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-3 card-hover hidden md:block">
+        <div class="relative">
+         <div class="h-32 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-5xl">
+          👜
+         </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-35%</span> <span class="absolute top-2 right-2 merchant-badge text-white text-xs px-2 py-0.5 rounded">Merchant</span>
+        </div>
+        <div class="mt-3">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">লেদার ব্যাগ</p>
+         <div class="flex items-center gap-2 mt-1">
+          <p class="text-lg font-bold text-red-600">৳১,৯৫০</p>
+          <p class="text-xs text-slate-400 line-through">৳৩,০০০</p>
+         </div>
+         <div class="flex items-center gap-1 mt-2">
+          <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+           <div class="h-full bg-red-500 rounded-full" style="width: 45%"></div>
+          </div><span class="text-xs text-slate-500 bengali-text">৫৫টি বাকি</span>
+         </div>
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-3 card-hover hidden lg:block">
+        <div class="relative">
+         <div class="h-32 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-5xl">
+          🕶️
+         </div><span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-70%</span> <span class="absolute top-2 right-2 own-product-badge text-white text-xs px-2 py-0.5 rounded">Our Pick</span>
+        </div>
+        <div class="mt-3">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">সানগ্লাস</p>
+         <div class="flex items-center gap-2 mt-1">
+          <p class="text-lg font-bold text-red-600">৳৪৫০</p>
+          <p class="text-xs text-slate-400 line-through">৳১,৫০০</p>
+         </div>
+         <div class="flex items-center gap-1 mt-2">
+          <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+           <div class="h-full bg-red-500 rounded-full" style="width: 90%"></div>
+          </div><span class="text-xs text-slate-500 bengali-text">১০টি বাকি</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Featured Merchants -->
+    <section class="py-12 px-4 bg-slate-50">
+     <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between mb-8">
+       <div>
+        <h3 class="text-2xl font-bold text-slate-800 bengali-text">✨ টপ মার্চেন্ট শপ</h3>
+        <p class="text-slate-500 text-sm mt-1 bengali-text">বিশ্বস্ত বিক্রেতাদের থেকে কিনুন</p>
+       </div><a href="#" class="text-teal-600 hover:text-teal-700 font-medium text-sm bengali-text">সব দেখুন →</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+       <div class="bg-white rounded-2xl p-4 card-hover border-2 border-transparent hover:border-amber-400">
+        <div class="flex items-center gap-3 mb-3">
+         <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl">
+          👔
+         </div>
+         <div class="flex-1">
+          <p class="font-semibold text-slate-800 bengali-text">ফ্যাশন হাট</p>
+          <div class="flex items-center gap-1"><span class="text-amber-400">★</span> <span class="text-sm text-slate-600">4.9</span> <span class="text-xs text-slate-400 bengali-text">(2.3K)</span>
+          </div>
+         </div>
+        </div>
+        <div class="flex gap-2"><span class="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded-full bengali-text">ভেরিফাইড</span> <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full bengali-text">৯৮% রেসপন্স</span>
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-4 card-hover border-2 border-transparent hover:border-amber-400">
+        <div class="flex items-center gap-3 mb-3">
+         <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center text-2xl">
+          💄
+         </div>
+         <div class="flex-1">
+          <p class="font-semibold text-slate-800 bengali-text">গ্লামার জোন</p>
+          <div class="flex items-center gap-1"><span class="text-amber-400">★</span> <span class="text-sm text-slate-600">4.8</span> <span class="text-xs text-slate-400 bengali-text">(1.8K)</span>
+          </div>
+         </div>
+        </div>
+        <div class="flex gap-2"><span class="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded-full bengali-text">ভেরিফাইড</span> <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full bengali-text">অফিসিয়াল</span>
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-4 card-hover border-2 border-transparent hover:border-amber-400">
+        <div class="flex items-center gap-3 mb-3">
+         <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-2xl">
+          📱
+         </div>
+         <div class="flex-1">
+          <p class="font-semibold text-slate-800 bengali-text">টেক বাজার</p>
+          <div class="flex items-center gap-1"><span class="text-amber-400">★</span> <span class="text-sm text-slate-600">4.7</span> <span class="text-xs text-slate-400 bengali-text">(3.1K)</span>
+          </div>
+         </div>
+        </div>
+        <div class="flex gap-2"><span class="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded-full bengali-text">ভেরিফাইড</span> <span class="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded-full bengali-text">টপ সেলার</span>
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-4 card-hover border-2 border-transparent hover:border-amber-400">
+        <div class="flex items-center gap-3 mb-3">
+         <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-2xl">
+          🏠
+         </div>
+         <div class="flex-1">
+          <p class="font-semibold text-slate-800 bengali-text">হোম ডেকো</p>
+          <div class="flex items-center gap-1"><span class="text-amber-400">★</span> <span class="text-sm text-slate-600">4.6</span> <span class="text-xs text-slate-400 bengali-text">(950)</span>
+          </div>
+         </div>
+        </div>
+        <div class="flex gap-2"><span class="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded-full bengali-text">ভেরিফাইড</span> <span class="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full bengali-text">ফাস্ট শিপ</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Our Products -->
+    <section class="py-12 px-4 bg-white">
+     <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between mb-8">
+       <div class="flex items-center gap-3"><span class="bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">TOOFAN</span>
+        <h3 class="text-2xl font-bold text-slate-800 bengali-text">আমাদের পণ্য</h3>
+       </div><a href="#" class="text-teal-600 hover:text-teal-700 font-medium text-sm bengali-text">সব দেখুন →</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"><!-- Our Product Cards -->
+       <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover">
+        <div class="relative">
+         <div class="h-40 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-6xl">
+          🧴
+         </div><span class="absolute top-2 right-2 own-product-badge text-white text-xs px-2 py-1 rounded-full font-medium">TOOFAN</span> <button class="absolute top-2 left-2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-all">
+          <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg></button>
+        </div>
+        <div class="p-4">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">অর্গানিক ফেস ওয়াশ</p>
+         <div class="flex items-center gap-1 mt-1"><span class="text-amber-400 text-sm">★★★★★</span> <span class="text-xs text-slate-400">(234)</span>
+         </div>
+         <div class="flex items-center justify-between mt-3">
+          <div>
+           <p class="text-lg font-bold text-slate-800">৳৩৫০</p>
+          </div><button class="p-2 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-all">
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+           </svg></button>
+         </div>
+        </div>
+       </article>
+       <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover">
+        <div class="relative">
+         <div class="h-40 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-6xl">
+          👕
+         </div><span class="absolute top-2 right-2 own-product-badge text-white text-xs px-2 py-1 rounded-full font-medium">TOOFAN</span> <span class="absolute bottom-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full bengali-text">-২০%</span> <button class="absolute top-2 left-2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-all">
+          <svg class="w-4 h-4 text-red-500" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg></button>
+        </div>
+        <div class="p-4">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">প্রিমিয়াম কটন টি-শার্ট</p>
+         <div class="flex items-center gap-1 mt-1"><span class="text-amber-400 text-sm">★★★★☆</span> <span class="text-xs text-slate-400">(189)</span>
+         </div>
+         <div class="flex items-center justify-between mt-3">
+          <div>
+           <p class="text-lg font-bold text-slate-800">৳৪৮০</p>
+           <p class="text-xs text-slate-400 line-through">৳৬০০</p>
+          </div><button class="p-2 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-all">
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+           </svg></button>
+         </div>
+        </div>
+       </article>
+       <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover">
+        <div class="relative">
+         <div class="h-40 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-6xl">
+          🎒
+         </div><span class="absolute top-2 right-2 own-product-badge text-white text-xs px-2 py-1 rounded-full font-medium">TOOFAN</span> <button class="absolute top-2 left-2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-all">
+          <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg></button>
+        </div>
+        <div class="p-4">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">ট্রাভেল ব্যাকপ্যাক</p>
+         <div class="flex items-center gap-1 mt-1"><span class="text-amber-400 text-sm">★★★★★</span> <span class="text-xs text-slate-400">(412)</span>
+         </div>
+         <div class="flex items-center justify-between mt-3">
+          <div>
+           <p class="text-lg font-bold text-slate-800">৳১,২৫০</p>
+          </div><button class="p-2 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-all">
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+           </svg></button>
+         </div>
+        </div>
+       </article>
+       <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover hidden md:block">
+        <div class="relative">
+         <div class="h-40 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-6xl">
+          🧢
+         </div><span class="absolute top-2 right-2 own-product-badge text-white text-xs px-2 py-1 rounded-full font-medium">TOOFAN</span> <button class="absolute top-2 left-2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-all">
+          <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg></button>
+        </div>
+        <div class="p-4">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">স্টাইলিশ ক্যাপ</p>
+         <div class="flex items-center gap-1 mt-1"><span class="text-amber-400 text-sm">★★★★☆</span> <span class="text-xs text-slate-400">(98)</span>
+         </div>
+         <div class="flex items-center justify-between mt-3">
+          <div>
+           <p class="text-lg font-bold text-slate-800">৳২৮০</p>
+          </div><button class="p-2 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-all">
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+           </svg></button>
+         </div>
+        </div>
+       </article>
+       <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover hidden lg:block">
+        <div class="relative">
+         <div class="h-40 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-6xl">
+          🧣
+         </div><span class="absolute top-2 right-2 own-product-badge text-white text-xs px-2 py-1 rounded-full font-medium">TOOFAN</span> <span class="absolute bottom-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full bengali-text">নতুন</span> <button class="absolute top-2 left-2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-all">
+          <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg></button>
+        </div>
+        <div class="p-4">
+         <p class="text-sm font-medium text-slate-800 truncate bengali-text">উইন্টার স্কার্ফ</p>
+         <div class="flex items-center gap-1 mt-1"><span class="text-amber-400 text-sm">★★★★★</span> <span class="text-xs text-slate-400">(56)</span>
+         </div>
+         <div class="flex items-center justify-between mt-3">
+          <div>
+           <p class="text-lg font-bold text-slate-800">৳৪৫০</p>
+          </div><button class="p-2 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-all">
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+           </svg></button>
+         </div>
+        </div>
+       </article>
+      </div>
+     </div>
+    </section><!-- Become a Seller CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+     <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-0 w-full h-full" style="background-image: url('data:image/svg+xml,%3Csvg width=\" 60\ height="\&quot;60\&quot;" viewbox="\&quot;0" 0 60 xmlns="\&quot;http://www.w3.org/2000/svg\&quot;%3E%3Cg" fill="\&quot;none\&quot;" fill-rule="\&quot;evenodd\&quot;%3E%3Cg" fill-opacity="\&quot;0.1\&quot;%3E%3Cpath" d="\&quot;M36" 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30v0h-2v4h-4v2h4v4h2v6h4v4h-4zm6 34v-4h4v4h0v2h4v4h2v-4h4v-2h6zm6 4v0h4v4h0v2h4v4h2v6h4v4h6z\ %3e%3c g%3e%3c svg%3e);></div>
+     </div>
+     <div class="max-w-4xl mx-auto text-center relative"><span class="inline-block bg-amber-500/20 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6 bengali-text">💰 বাড়তি আয়ের সুযোগ</span>
+      <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 bengali-text">আপনার পণ্য বিক্রি করুন TOOFAN-তে</h3>
+      <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto bengali-text">লক্ষাধিক গ্রাহকের কাছে পৌঁছান। সহজ রেজিস্ট্রেশন, কম কমিশন, দ্রুত পেমেন্ট। আজই শুরু করুন!</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center"><button class="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg bengali-text"> 🚀 বিক্রেতা হিসেবে রেজিস্টার করুন </button> <button class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full transition-all border border-white/30 bengali-text"> 📖 আরও জানুন </button>
+      </div>
+      <div class="mt-10 grid grid-cols-3 gap-8">
+       <div class="text-center">
+        <p class="text-3xl font-bold text-amber-400">৫%</p>
+        <p class="text-slate-400 text-sm bengali-text">সর্বনিম্ন কমিশন</p>
+       </div>
+       <div class="text-center">
+        <p class="text-3xl font-bold text-emerald-400">৭ দিন</p>
+        <p class="text-slate-400 text-sm bengali-text">দ্রুত পেমেন্ট</p>
+       </div>
+       <div class="text-center">
+        <p class="text-3xl font-bold text-cyan-400">২৪/৭</p>
+        <p class="text-slate-400 text-sm bengali-text">সাপোর্ট</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- Features -->
+    <section class="py-12 px-4 bg-white">
+     <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+       <div class="text-center p-4">
+        <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-3 text-2xl">
+         🚚
+        </div>
+        <h4 class="font-semibold text-slate-800 bengali-text">দ্রুত ডেলিভারি</h4>
+        <p class="text-sm text-slate-500 mt-1 bengali-text">ঢাকায় ২৪ ঘণ্টায়</p>
+       </div>
+       <div class="text-center p-4">
+        <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-3 text-2xl">
+         🔒
+        </div>
+        <h4 class="font-semibold text-slate-800 bengali-text">নিরাপদ পেমেন্ট</h4>
+        <p class="text-sm text-slate-500 mt-1 bengali-text">১০০% সিকিউর</p>
+       </div>
+       <div class="text-center p-4">
+        <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-3 text-2xl">
+         ↩️
+        </div>
+        <h4 class="font-semibold text-slate-800 bengali-text">সহজ রিটার্ন</h4>
+        <p class="text-sm text-slate-500 mt-1 bengali-text">৭ দিনের মধ্যে</p>
+       </div>
+       <div class="text-center p-4">
+        <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-3 text-2xl">
+         💬
+        </div>
+        <h4 class="font-semibold text-slate-800 bengali-text">২৪/৭ সাপোর্ট</h4>
+        <p class="text-sm text-slate-500 mt-1 bengali-text">সবসময় পাশে</p>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main><!-- Footer -->
+   <footer class="bg-slate-900 text-white py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+      <div>
+       <div class="flex items-center gap-2 mb-4">
+        <div class="w-10 h-10 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center">
+         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+         </svg>
+        </div><span class="text-xl font-bold">TOOFAN</span>
+       </div>
+       <p class="text-slate-400 text-sm bengali-text">বাংলাদেশের সেরা অনলাইন মার্কেটপ্লেস। সবার জন্য সব কিছু।</p>
+      </div>
+      <div>
+       <h5 class="font-semibold mb-4 bengali-text">দরকারি লিংক</h5>
+       <ul class="space-y-2 text-sm text-slate-400">
+        <li><a href="#" class="hover:text-white transition-colors bengali-text">আমাদের সম্পর্কে</a></li>
+        <li><a href="#" class="hover:text-white transition-colors bengali-text">যোগাযোগ</a></li>
+        <li><a href="#" class="hover:text-white transition-colors bengali-text">ক্যারিয়ার</a></li>
+        <li><a href="#" class="hover:text-white transition-colors bengali-text">ব্লগ</a></li>
+       </ul>
+      </div>
+      <div>
+       <h5 class="font-semibold mb-4 bengali-text">সাহায্য</h5>
+       <ul class="space-y-2 text-sm text-slate-400">
+        <li><a href="#" class="hover:text-white transition-colors bengali-text">কিভাবে অর্ডার করবেন</a></li>
+        <li><a href="#" class="hover:text-white transition-colors bengali-text">রিটার্ন পলিসি</a></li>
+        <li><a href="#" class="hover:text-white transition-colors bengali-text">শিপিং তথ্য</a></li>
+        <li><a href="#" class="hover:text-white transition-colors bengali-text">FAQ</a></li>
+       </ul>
+      </div>
+      <div>
+       <h5 class="font-semibold mb-4 bengali-text">পেমেন্ট মেথড</h5>
+       <div class="flex flex-wrap gap-2">
+        <div class="bg-white rounded px-3 py-1.5 text-xs font-bold text-slate-800">
+         bKash
+        </div>
+        <div class="bg-white rounded px-3 py-1.5 text-xs font-bold text-slate-800">
+         Nagad
+        </div>
+        <div class="bg-white rounded px-3 py-1.5 text-xs font-bold text-slate-800">
+         VISA
+        </div>
+        <div class="bg-white rounded px-3 py-1.5 text-xs font-bold text-slate-800">
+         COD
+        </div>
+       </div>
+       <h5 class="font-semibold mt-4 mb-2 bengali-text">অ্যাপ ডাউনলোড</h5>
+       <div class="flex gap-2"><button class="bg-white/10 hover:bg-white/20 rounded-lg px-3 py-2 text-xs transition-all">📱 Play Store</button> <button class="bg-white/10 hover:bg-white/20 rounded-lg px-3 py-2 text-xs transition-all">🍎 App Store</button>
+       </div>
+      </div>
+     </div>
+     <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-slate-400 text-sm bengali-text">© ২০২৪ TOOFAN। সর্বস্বত্ব সংরক্ষিত।</p>
+      <div class="flex gap-4"><a href="#" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-full flex items-center justify-center transition-all">
+        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg></a> <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-full flex items-center justify-center transition-all">
+        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+        </svg></a> <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-full flex items-center justify-center transition-all">
+        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      site_name: 'TOOFAN',
+      tagline: 'সবার জন্য সব কিছু',
+      hero_title: 'বাংলাদেশের সবচেয়ে বড় <br class="hidden md:block"><span class="text-emerald-400">অনলাইন মার্কেটপ্লেস</span>',
+      hero_subtitle: 'হাজারো বিক্রেতার লক্ষাধিক পণ্য, সেরা দামে। নিজে বিক্রি করুন অথবা কিনুন বিশ্বস্ত মার্চেন্টদের থেকে।',
+      cta_button: '🛒 শপিং শুরু করুন',
+      promo_text: 'ঢাকায় ৫০০৳+ অর্ডারে ফ্রি ডেলিভারি! কোড: FREEDEL',
+      primary_color: '#0d9488',
+      secondary_color: '#f59e0b',
+      background_color: '#f8fafc',
+      text_color: '#1e293b',
+      accent_color: '#10b981'
+    };
+    
+    // Apply configuration to UI
+    async function onConfigChange(config) {
+      document.getElementById('site-name').textContent = config.site_name || defaultConfig.site_name;
+      document.getElementById('tagline').textContent = config.tagline || defaultConfig.tagline;
+      document.getElementById('hero-title').innerHTML = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
+      document.getElementById('promo-text').textContent = config.promo_text || defaultConfig.promo_text;
+    }
+    
+    // Map to capabilities for color/font editing
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              config.secondary_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ secondary_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+    
+    // Map to edit panel values
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['site_name', config.site_name || defaultConfig.site_name],
+        ['tagline', config.tagline || defaultConfig.tagline],
+        ['hero_title', config.hero_title || defaultConfig.hero_title],
+        ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+        ['cta_button', config.cta_button || defaultConfig.cta_button],
+        ['promo_text', config.promo_text || defaultConfig.promo_text]
+      ]);
+    }
+    
+    // Initialize SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+    
+    // Countdown Timer
+    function updateCountdown() {
+      const now = new Date();
+      const endOfDay = new Date();
+      endOfDay.setHours(23, 59, 59, 999);
+      
+      const diff = endOfDay - now;
+      
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+    
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c02f0e2c3e9ba5f',t:'MTc2ODc5MDE0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
