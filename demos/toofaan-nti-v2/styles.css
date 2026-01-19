@@ -1315,6 +1315,37 @@ button {
     .hero-image {
         display: none;
     }
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .category-card {
+        padding: 0.5rem 0.25rem;
+        min-width: 0;
+    }
+
+    .category-icon {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .category-name {
+        font-size: 0.65rem;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+
+    .category-count {
+        display: none;
+        /* Hide count on mobile to save space */
+    }
 }
 
 @media (max-width: 480px) {
@@ -1322,12 +1353,10 @@ button {
         font-size: var(--font-size-2xl);
     }
 
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
 
     .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
     }
 
     .merchant-grid {
