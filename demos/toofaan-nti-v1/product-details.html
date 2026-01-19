@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
@@ -21,10 +22,11 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
-                <div class="logo">
+                <a href="index.html" class="logo"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
                     <span class="logo-icon">🛍️</span>
                     <span class="logo-text">TOOFAAN</span>
-                </div>
+                </a>
 
                 <div class="nav-links" id="navLinks">
                     <a href="index.html" class="nav-link">Home</a>
@@ -49,7 +51,7 @@
                             <circle cx="20" cy="21" r="1"></circle>
                             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                         </svg>
-                        <span class="cart-badge">3</span>
+                        <span class="cart-badge">0</span>
                     </button>
                     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                         <span></span>
@@ -182,27 +184,59 @@
                         </button>
                     </div>
 
-                    <div class="product-guarantees">
-                        <div class="guarantee-item">
-                            <span class="guarantee-icon">🚚</span>
-                            <div>
-                                <div class="guarantee-title">Free Delivery</div>
-                                <div class="guarantee-text">On orders over ৳500</div>
+                </div>
+
+                <!-- Product Service Sidebar -->
+                <div class="product-service-sidebar">
+                    <div class="service-card">
+                        <h3 class="service-title">Delivery Options</h3>
+                        <div class="service-item">
+                            <span class="service-icon">📍</span>
+                            <div class="service-info">
+                                <div class="info-label">Standard Delivery</div>
+                                <div class="info-value" id="deliveryTimeVal">2-3 Days</div>
                             </div>
                         </div>
-                        <div class="guarantee-item">
-                            <span class="guarantee-icon">↩️</span>
-                            <div>
-                                <div class="guarantee-title">7 Days Return</div>
-                                <div class="guarantee-text">Easy return policy</div>
+                        <div class="service-item">
+                            <span class="service-icon">💸</span>
+                            <div class="service-info">
+                                <div class="info-label">Shipping Cost</div>
+                                <div class="info-value" id="shippingCostVal">Free</div>
                             </div>
                         </div>
-                        <div class="guarantee-item">
-                            <span class="guarantee-icon">✓</span>
-                            <div>
-                                <div class="guarantee-title">Authentic Product</div>
-                                <div class="guarantee-text">100% genuine guarantee</div>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 class="service-title">Service Highlights</h3>
+                        <div class="service-item">
+                            <span class="service-icon">🛡️</span>
+                            <div class="service-info">
+                                <div class="info-label">Warranty</div>
+                                <div class="info-value" id="warrantyVal">1 Year Brand Warranty</div>
                             </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">🔄</span>
+                            <div class="service-info">
+                                <div class="info-label">Returns</div>
+                                <div class="info-value">7 Days Easy Return</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">💳</span>
+                            <div class="service-info">
+                                <div class="info-label">EMI</div>
+                                <div class="info-value" id="emiVal">Available</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card payment-card">
+                        <h3 class="service-title">Payment Methods</h3>
+                        <div class="payment-icons">
+                            <span title="Cash on Delivery">💵 COD</span>
+                            <span title="bKash">📱 bKash</span>
+                            <span title="Card">💳 Card</span>
                         </div>
                     </div>
                 </div>
@@ -464,6 +498,24 @@
         </div>
     </footer>
 
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-overlay"></div>
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Shopping Cart</h2>
+                <button class="cart-modal-close" aria-label="Close cart">✕</button>
+            </div>
+            <div class="cart-modal-body" id="cartModalBody">
+                <!-- Cart items will be loaded by JavaScript -->
+            </div>
+            <div class="cart-modal-footer" id="cartModalFooter">
+                <!-- Total and checkout button will be loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
     <script src="product-details.js"></script>
 </body>
 
