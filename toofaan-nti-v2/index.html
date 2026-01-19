@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bangladesh's premier online marketplace - Shop quality products from trusted sellers and merchants. Best prices, fast delivery across Bangladesh.">
+    <meta name="keywords"
+        content="online shopping bangladesh, ecommerce bd, buy online, bangladesh marketplace, merchant products">
+    <title>TOOFAAN - Your Trusted Online Marketplace in Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">🛍️</span>
+                    <span class="logo-text">TOOFAAN</span>
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#merchants" class="nav-link">Merchants</a>
+                    <a href="#deals" class="nav-link">Deals</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="icon-btn search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn cart-btn" aria-label="Cart">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-badge">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">🎉 New Arrivals Every Day</span>
+                    <h1 class="hero-title">
+                        Discover Amazing Products from
+                        <span class="gradient-text">Trusted Sellers</span>
+                    </h1>
+                    <p class="hero-description">
+                        Shop from thousands of quality products. Support local merchants and enjoy fast delivery across
+                        Bangladesh.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">
+                            Explore Products
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn-secondary">Become a Merchant</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Products</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2K+</div>
+                            <div class="stat-label">Merchants</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100K+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">📱</div>
+                        <div class="card-text">Electronics</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">👕</div>
+                        <div class="card-text">Fashion</div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">🏠</div>
+                        <div class="card-text">Home & Living</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Find exactly what you're looking for</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h3 class="category-name">Electronics</h3>
+                    <p class="category-count">5,234 items</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">👗</div>
+                    <h3 class="category-name">Fashion</h3>
+                    <p class="category-count">12,456 items</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🏠</div>
+                    <h3 class="category-name">Home & Living</h3>
+                    <p class="category-count">3,789 items</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💄</div>
+                    <h3 class="category-name">Beauty</h3>
+                    <p class="category-count">2,145 items</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">📚</div>
+                    <h3 class="category-name">Books</h3>
+                    <p class="category-count">8,901 items</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">⚽</div>
+                    <h3 class="category-name">Sports</h3>
+                    <p class="category-count">1,567 items</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Handpicked items just for you</p>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+            <div class="section-footer">
+                <button class="btn btn-outline">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchants Section -->
+    <section class="merchants" id="merchants">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Merchants</h2>
+                <p class="section-subtitle">Shop from verified sellers</p>
+            </div>
+            <div class="merchant-grid">
+                <div class="merchant-card">
+                    <div class="merchant-header">
+                        <div class="merchant-avatar">TM</div>
+                        <div class="merchant-badge verified">✓ Verified</div>
+                    </div>
+                    <h3 class="merchant-name">Tech Mart BD</h3>
+                    <p class="merchant-category">Electronics & Gadgets</p>
+                    <div class="merchant-stats">
+                        <div class="merchant-stat">
+                            <span class="stat-value">4.8</span>
+                            <span class="stat-label">⭐ Rating</span>
+                        </div>
+                        <div class="merchant-stat">
+                            <span class="stat-value">1.2K</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-small btn-outline">Visit Store</button>
+                </div>
+
+                <div class="merchant-card">
+                    <div class="merchant-header">
+                        <div class="merchant-avatar">FH</div>
+                        <div class="merchant-badge verified">✓ Verified</div>
+                    </div>
+                    <h3 class="merchant-name">Fashion Hub</h3>
+                    <p class="merchant-category">Clothing & Accessories</p>
+                    <div class="merchant-stats">
+                        <div class="merchant-stat">
+                            <span class="stat-value">4.9</span>
+                            <span class="stat-label">⭐ Rating</span>
+                        </div>
+                        <div class="merchant-stat">
+                            <span class="stat-value">856</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-small btn-outline">Visit Store</button>
+                </div>
+
+                <div class="merchant-card">
+                    <div class="merchant-header">
+                        <div class="merchant-avatar">HL</div>
+                        <div class="merchant-badge verified">✓ Verified</div>
+                    </div>
+                    <h3 class="merchant-name">Home Luxe</h3>
+                    <p class="merchant-category">Home Decor & Furniture</p>
+                    <div class="merchant-stats">
+                        <div class="merchant-stat">
+                            <span class="stat-value">4.7</span>
+                            <span class="stat-label">⭐ Rating</span>
+                        </div>
+                        <div class="merchant-stat">
+                            <span class="stat-value">634</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-small btn-outline">Visit Store</button>
+                </div>
+
+                <div class="merchant-card">
+                    <div class="merchant-header">
+                        <div class="merchant-avatar">BB</div>
+                        <div class="merchant-badge verified">✓ Verified</div>
+                    </div>
+                    <h3 class="merchant-name">Beauty Bliss</h3>
+                    <p class="merchant-category">Cosmetics & Skincare</p>
+                    <div class="merchant-stats">
+                        <div class="merchant-stat">
+                            <span class="stat-value">4.9</span>
+                            <span class="stat-label">⭐ Rating</span>
+                        </div>
+                        <div class="merchant-stat">
+                            <span class="stat-value">423</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-small btn-outline">Visit Store</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Stay Updated</h2>
+                    <p class="newsletter-description">Subscribe to get special offers, free giveaways, and exclusive
+                        deals.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🛍️</span>
+                        <span class="logo-text">TOOFAAN</span>
+                    </div>
+                    <p class="footer-description">
+                        Bangladesh's most trusted online marketplace. Shop with confidence.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#merchants">Merchants</a></li>
+                        <li><a href="#deals">Deals</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#track">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">For Merchants</h3>
+                    <ul class="footer-links">
+                        <li><a href="#sell">Start Selling</a></li>
+                        <li><a href="#merchant-help">Merchant Help</a></li>
+                        <li><a href="#commission">Commission Rates</a></li>
+                        <li><a href="#guidelines">Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TOOFAAN. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-overlay"></div>
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Shopping Cart</h2>
+                <button class="cart-modal-close" aria-label="Close cart">✕</button>
+            </div>
+            <div class="cart-modal-body" id="cartModalBody">
+                <!-- Cart items will be loaded by JavaScript -->
+            </div>
+            <div class="cart-modal-footer" id="cartModalFooter">
+                <!-- Total and checkout button will be loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
